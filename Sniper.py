@@ -34,7 +34,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.lower().startswith("ping"):
-        await client.send_message(message.channel, "pong")
+        await client.send_message(message.channel, "PONG 🏓")
 
     if message.content.lower().startswith("test"):
         botmsg = await client.send_message(message.channel, "👍 oder 👎")
