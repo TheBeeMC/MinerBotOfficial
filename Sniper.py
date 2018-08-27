@@ -22,7 +22,6 @@ async def on_message(message):
                 try:
                     await client.delete_message(message)
                     await client.send_message(message.channel, "**Hey!** Don't swear 😡 Thank you")
-                    await client.delete_message(message)
                 except discord.errors.NotFound:
                     return
          
