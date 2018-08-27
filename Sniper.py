@@ -25,9 +25,9 @@ async def on_message_delete(message):
     fmt = '{0.author.name} has deleted the message:\n{0.content}'
     await client.send_message(message.channel, fmt.format(message))
 
-@bot.event
+@client.event
 async def on_ready():
-      await bot.change_presence(activity=discord.Game(name="& Cave mining ⛏"))
+      await client.change_presence(activity=discord.Game(name="& Cave mining ⛏"))
 
 
 
