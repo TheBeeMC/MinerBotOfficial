@@ -24,14 +24,9 @@ async def on_message(message):
                     await client.send_message(message.channel, "**Hey!** Don't swear 😡 Thank you")
                 except discord.errors.NotFound:
                     return
-
-@client.event
-async def on_message(message):
-    if message.content.lower().startswith("?ping"):
-        await client.send_message(message.channel, "pong")                
+         
                 
-                
-                                
+                                 
 @client.event
 async def on_ready():
       await client.change_presence(game=discord.Game(name="& Cave mining ⛏"))
