@@ -31,15 +31,6 @@ async def on_ready():
         
         
         
-@client.event
-async def on_message(message):
-    if message.content.lower().startswith("ping"):
-        await client.send_message(message.channel, "PONG 🏓")
-        
-
-
-
-
 
 
 client.run(os.getenv('TOKEN'))
