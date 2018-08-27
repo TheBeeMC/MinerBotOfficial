@@ -30,10 +30,11 @@ async def on_ready():
       await client.change_presence(game=discord.Game(name="& Cave mining ⛏"))
         
         
+
 @client.event
 async def on_message(message):
-    if message.content.lower().startswith("$status):
-        await client.send_message(message.channel, "Miner status: 🔵 Online")        
+    if message.content.lower().startswith("?ping"):
+        await client.send_message(message.channel, "pong")    
 
 
 client.run(os.getenv('TOKEN'))
