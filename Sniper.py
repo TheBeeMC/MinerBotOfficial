@@ -14,10 +14,6 @@ chat_filter = ["FUCK", "SHIT", "LOSER", "FAG" "FAGGOT", "BITCH"]
 bypass_list = []
 
 @client.event
-async def on_ready():
-    print("Bot is online and connected to Discord")
-
-@client.event
 async def on_message(message):
     contents = message.content.split(" ") #contents is a list type
     for word in contents:
