@@ -17,7 +17,7 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.content.startswith('Fuck'):
-        await client.delete_message(msg)
+        await client.delete_message
 
 @client.event
 async def on_ready():
