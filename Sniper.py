@@ -37,10 +37,29 @@ async def on_message(message):
         await client.send_message(message.channel, "PONG 🏓")
         
 
-    if message.content.lower().startswith("Want a giveaway guys?"):
-        botmsg = await client.send_message(message.channel, "React with 👍")
+    if message.content.lower().startswith("Does romantichadron sucks"):
+        botmsg = await client.send_message(message.channel, "React with 👍 👎")
 
         await client.add_reaction(botmsg, "👍")
+        await client.add_reaction(botmsg, "👎")
+
+        global testmsgid
+        testmsgid = botmsg.id
+
+        global testmsguser
+        testmsguser = message.author
+
+@client.event
+async def on_reaction_add(reaction, user):
+    msg = reaction.message
+    chat = reaction.message.channel
+
+    if reaction.emoji == "👍" and msg.id == testmsgid and user == testmsguser:
+        await client.send_message(chat, "Yes he is dumb and low iq")
+
+    if reaction.emoji == "👎" and msg.id == testmsgid and user == testmsguser:
+        await client.send_message(chat, "Wrong lol he is dumb")
+
 
 
 
