@@ -35,6 +35,14 @@ async def on_ready():
 async def on_message(message):
     if message.content.lower().startswith("ping"):
         await client.send_message(message.channel, "PONG 🏓")
+        
+        
+    if message.content.lower().startswith("giveaway):
+        emb - (discord.Embed(description="React with 🎉 to enter!", colour=0x3DF270))
+        emb - (discord.Embed(description="Time remaining: Random time", colour=0x3DF270))
+        emb - (discord.Embed(description="Ends at • Random Time PM/ AM", colour=0x3DF270))                                  
+        emb.set_author(name="Premium Rank Giveaway")
+        await client.send_messafe(message.channel, embed=em)                              
 
     if message.content.lower().startswith("test"):
         botmsg = await client.send_message(message.channel, "👍 oder 👎")
