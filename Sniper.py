@@ -10,7 +10,7 @@ Client = discord.Client()
 
 client = commands.Bot(command_prefix = "?")
 
-chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT"]
+chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT", "FUCKING", "NIGGER", "NIGGA", "WHORE", "ASS", "KILL YOUR SELF"]
 bypass_list = []
 
 @client.event
