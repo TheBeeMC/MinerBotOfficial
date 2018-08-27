@@ -28,6 +28,37 @@ async def on_message(message):
 @client.event
 async def on_ready():
       await client.change_presence(game=discord.Game(name="& Cave mining ⛏"))
+        
+        
+        
+@client.event
+async def on_message(message):
+    if message.content.lower().startswith("?ping"):
+        await client.send_message(message.channel, "pong")
+
+    if message.content.lower().startswith("?test"):
+        botmsg = await client.send_message(message.channel, "👍 oder 👎")
+
+        await client.add_reaction(botmsg, "👍")
+        await client.add_reaction(botmsg, "👎")
+
+        global testmsgid
+        testmsgid = botmsg.id
+
+        global testmsguser
+        testmsguser = message.author
+
+@client.event
+async def on_reaction_add(reaction, user):
+    msg = reaction.message
+    chat = reaction.message.channel
+
+    if reaction.emoji == "👍" and msg.id == testmsgid and user == testmsguser:
+        await client.send_message(chat, "Daumen Hoch")
+
+    if reaction.emoji == "👎" and msg.id == testmsgid and user == testmsguser:
+        await client.send_message(chat, "Daumen Runter")
+
 
 
 
