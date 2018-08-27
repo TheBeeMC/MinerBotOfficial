@@ -36,15 +36,11 @@ async def on_message(message):
     if message.content.lower().startswith("ping"):
         await client.send_message(message.channel, "PONG 🏓")
         
-        
+
     if message.content.lower().startswith("Want a giveaway guys?"):
-        await client.add_reaction(botmsg, "👍")
-
-    if message.content.lower().startswith("test"):
-        botmsg = await client.send_message(message.channel, "👍 oder 👎")
+        botmsg = await client.send_message(message.channel, "React with 👍")
 
         await client.add_reaction(botmsg, "👍")
-        await client.add_reaction(botmsg, "👎")
 
         global testmsgid
         testmsgid = botmsg.id
@@ -52,16 +48,7 @@ async def on_message(message):
         global testmsguser
         testmsguser = message.author
 
-@client.event
-async def on_reaction_add(reaction, user):
-    msg = reaction.message
-    chat = reaction.message.channel
 
-    if reaction.emoji == "👍" and msg.id == testmsgid and user == testmsguser:
-        await client.send_message(chat, "Daumen Hoch")
-
-    if reaction.emoji == "👎" and msg.id == testmsgid and user == testmsguser:
-        await client.send_message(chat, "Daumen Runter")
 
 
 
