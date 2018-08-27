@@ -2,6 +2,8 @@ import discord
 from discord.ext import commands
 import random
 import asyncio
+import time
+import os
 
 
 class MyClient(commands.Bot):
@@ -140,4 +142,4 @@ async def on_ready():
 
 
 
-bot.run('NDgxMzE2NzI2MTM5NTE4OTc3.DmWm8w.zNLdCtF7oGbnUa9vYEPEXCxb15k')
+client.run(os.getenv('TOKEN'))
