@@ -37,7 +37,7 @@ async def on_message(message):
         await client.send_message(message.channel, "PONG 🏓")
         
         
-    if message.content.lower().startswith("giveaway):
+    if message.content.lower().startswith("giveaway"):
         emb - (discord.Embed(description="React with 🎉 to enter!", colour=0x3DF270))
         emb - (discord.Embed(description="Time remaining: Random time", colour=0x3DF270))
         emb - (discord.Embed(description="Ends at • Random Time PM/ AM", colour=0x3DF270))                                  
