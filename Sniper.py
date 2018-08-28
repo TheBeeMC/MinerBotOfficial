@@ -6,12 +6,27 @@ import time
 import os
 
 
-Client = discord.Client()
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged in as')
+        print(self.user.name)
+        print(self.user.id)
+        print('------')
+
+    async def on_message(self, message):
+        # we do not want the bot to reply to itself
+        if message.author.id == self.user.id:
+            return
+
+        if message.content.startswith('!hello'):
+            await message.channel.send('Hello {0.author.mention}'.format(message))
 
 client = commands.Bot(command_prefix = "?")
 
 chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT", "FUCKING", "NIGGER", "NIGGA", "WHORE", "ASS", "KILL YOUR SELF", "IDIOT", "DUMBASS", "LOSER"]
 bypass_list = []
+
+
 
 @client.event
 async def on_message(message):
@@ -26,18 +41,18 @@ async def on_message(message):
                     return
                 
                 
-        if message.content.startswith('!hello'):
-            await message.channel.send('Hello {0.author.mention}'.format(message))                
-         
                 
+
+      
+                        
                                  
 @client.event
 async def on_ready():
-      await client.change_presence(game=discord.Game(name="& Mining ⛏"))
+      await client.change_presence(game=discord.Game(name="& Cave mining ⛏"))
         
         
         
-                    
-
-
+      
+        
+client = MyClient()
 client.run(os.getenv('TOKEN'))
