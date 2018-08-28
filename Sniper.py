@@ -7,7 +7,8 @@ import os
 
 
 
-client = MyClient()
+Client = discord.Client()
+client = commands.Bot(command_prefix = "?")
 
 chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT", "FUCKING", "NIGGER", "NIGGA", "WHORE", "ASS", "KILL YOUR SELF", "IDIOT", "DUMBASS", "LOSER"]
 bypass_list = []
