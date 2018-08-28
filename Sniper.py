@@ -28,12 +28,8 @@ async def on_message(message):
                 
                 
 
-@client.event
-async def on_message(message):
-    if message.content == "cookie":
-        await client.send_message(message.channel, ":cookie:") #responds with Cookie emoji when someone says "cookie"            
-         
-                
+      
+                        
                                  
 @client.event
 async def on_ready():
@@ -41,7 +37,10 @@ async def on_ready():
         
         
         
-                    
+@client.event
+async def on_message(message):
+    if message.content == "cookie":
+        await client.send_message(message.channel, ":cookie:") #responds with Cookie emoji when someone says "cookie"                          
 
 
 client.run(os.getenv('TOKEN'))
