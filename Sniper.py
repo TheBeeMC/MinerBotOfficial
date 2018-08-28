@@ -7,7 +7,7 @@ import os
 
 
 
-client = commands.Bot(command_prefix = "?")
+client = MyClient()
 
 chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT", "FUCKING", "NIGGER", "NIGGA", "WHORE", "ASS", "KILL YOUR SELF", "IDIOT", "DUMBASS", "LOSER"]
 bypass_list = []
@@ -40,5 +40,4 @@ async def on_ready():
         
       
         
-client = MyClient()
 client.run(os.getenv('TOKEN'))
