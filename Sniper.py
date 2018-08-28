@@ -13,8 +13,6 @@ client = commands.Bot(command_prefix = "?")
 chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT", "FUCKING", "NIGGER", "NIGGA", "WHORE", "ASS", "KILL YOUR SELF", "IDIOT", "DUMBASS", "LOSER"]
 bypass_list = []
 
-
-
 @client.event
 async def on_message(message):
     contents = message.content.split(" ") #contents is a list type
@@ -28,22 +26,18 @@ async def on_message(message):
                     return
                 
                 
+        if message.content.startswith('!hello'):
+            await message.channel.send('Hello {0.author.mention}'.format(message))                
+         
                 
-
-      
-                        
                                  
 @client.event
 async def on_ready():
-      await client.change_presence(game=discord.Game(name="& Cave mining ⛏"))
+      await client.change_presence(game=discord.Game(name="& Mining ⛏"))
         
         
         
-@client.event
-async def on_message(message):
-    if message.content == "cookie":
-        await client.send_message(message.channel, ":cookie:") #responds with Cookie emoji when someone says "cookie"             
-        
+                    
 
 
 client.run(os.getenv('TOKEN'))
