@@ -28,7 +28,10 @@ async def on_message(message):
                     return
                 
                 
-                
+@client.event
+async def on_message(message):
+        if message.content.startswith('!status'):
+            await message.channel.send('Miner Status is currently offline')
 
       
                         
