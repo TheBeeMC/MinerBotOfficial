@@ -28,10 +28,13 @@ async def on_message(message):
                     return
                 
                 
-@client.event
-async def on_message(self, message):
-        if message.content.startswith('!satus'):
-            msg = await message.channel.send('Miner Status is currently down')
+    async def on_message(self, message):
+        # we do not want the bot to reply to itself
+        if message.author.id == self.user.id:
+            return
+
+        if message.content.startswith('!hello'):
+            await message.channel.send('Hello {0.author.mention}'.format(message))
 
       
                         
