@@ -38,7 +38,7 @@ async def _client(ctx):
                                  
 @client.event
 async def on_ready():
-      await client.change_presence(game=discord.Game(name="Purchase Miner for 5$ ⛏"))
+      await client.change_presence(game=discord.Game(name="Miner Service is down ⛏"))
         
         
         
