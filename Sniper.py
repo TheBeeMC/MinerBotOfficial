@@ -10,7 +10,7 @@ import os
 Client = discord.Client()
 client = commands.Bot(command_prefix = "?")
 
-chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT", "FUCKING", "NIGGER", "NIGGA", "WHORE", "ASS", "KILL YOUR SELF", "IDIOT", "DUMBASS", "LOSER"]
+chat_filter = ["FUCK", "CUNT", "BITCH", "DICK", "KYS", "FAGGOT", "FUCKING", "NIGGER", "NIGGA", "WHORE", "ASS", "KILL YOUR SELF", "IDIOT", "DUMBASS", "LOSER", "HTTPS://", "***KYS***"]
 bypass_list = []
 
 
@@ -23,7 +23,7 @@ async def on_message(message):
             if not message.author.id in bypass_list:
                 try:
                     await client.delete_message(message)
-                    await client.send_message(message.channel, "**Hey!** Don't swear 😡 Thank you")
+                    await client.send_message(message.channel, "**Hey!** We don't allow swearing 😡 Thank you")
                 except discord.errors.NotFound:
                     return
                 
@@ -35,7 +35,7 @@ async def on_message(message):
                                  
 @client.event
 async def on_ready():
-      await client.change_presence(game=discord.Game(name="& Cave mining ⛏"))
+      await client.change_presence(game=discord.Game(name="Purchase Miner for 5$ ⛏"))
         
         
         
