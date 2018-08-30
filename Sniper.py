@@ -28,20 +28,12 @@ async def on_message(message):
                     return
                 
                 
-    async def on_message(self, message):
-        # we do not want the bot to reply to itself
-        if message.author.id == self.user.id:
-            return
 
-        if message.content.startswith('!hello'):
-            await message.channel.send('Hello {0.author.mention}'.format(message))
-
-      
-                        
+                              
                                  
 @client.event
 async def on_ready():
-      await client.change_presence(game=discord.Game(name="Miner Service is down ⛏"))
+      await client.change_presence(game=discord.Game(name="Miner Status is down and we will be resolving it as soon as possible ⛏"))
         
         
         
