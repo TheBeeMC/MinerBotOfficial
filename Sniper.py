@@ -32,7 +32,7 @@ async def on_message(message):
 @cool.command(name='$help')
 async def _client(ctx):
     """Is the bot cool?"""
-    await client.send('***Help***')
+    await ctx.send('***Help***')
       
                         
                                  
