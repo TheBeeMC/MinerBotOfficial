@@ -41,9 +41,8 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('love'):
-        await bot.msg.delete()       
-        await bot.send_message(message.channel, ":heart: ")      
+    if message.content.startswith('cookie'):   
+        await bot.send_message(message.channel, ":cookie:")      
 
     if message.content.startswith('/info'):
         await bot.send_message(message.channel, "Miner Bot™ @ coded by Captain#2713")
