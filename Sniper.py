@@ -26,7 +26,18 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)
 
     if message.content.startswith('+Loltest'):
-        await bot.send_message(message.channel, "")
+        await bot.send_message(message.channel, "***Payment Infos***")
+        await bot.send_message(message.channel, "")    
+        await bot.send_message(message.channel, "Bot Cost: 5$ ")
+        await bot.send_message(message.channel, "Refunds: Not allowed")    
+        await bot.send_message(message.channel, "Info: You will pay 5$ PayPal to @Captain once payment goes in with Friends & Family ONLY then you will invite me to your server and give me Administrator so I can add the bot itself. This is the only way for you to get the discord bot after purchase. Remember this is the only way to protect it from getting it leaked.")
+        await bot.send_message(message.channel, "Why chose Miner Bot? Because it is fun and I will be adding better things to it such as giveaways and polls and ping ms and more? Even get everyone active!!!")    
+        await bot.send_message(message.channel, "***Payment Infos***")
+        await bot.send_message(message.channel, "***Payment Infos***")    
+        await bot.send_message(message.channel, "***Payment Infos***")
+        await bot.send_message(message.channel, "***Payment Infos***")    
+        await bot.send_message(message.channel, "***Payment Infos***")
+        await bot.send_message(message.channel, "***Payment Infos***")            
         print('Bot has been added to new server')
 
     if message.content.startswith('+info'):
