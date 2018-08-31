@@ -26,7 +26,7 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)
 
       
-    if message.content.startswith('fuck', 'FUCKING', 'FUCK', 'FuCk', 'fucking', 'NIGGER', 'NIGGA', 'nigga', 'L'):
+    if message.content.startswith('fuck'):
         await bot.send_message(message.channel, "Try not swearing next time ok? 😡")      
 
     if message.content.startswith('+info'):
