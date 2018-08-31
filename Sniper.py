@@ -36,16 +36,20 @@ async def on_message(message):
     if message.content.startswith('/payment'):
         embed=discord.Embed(title="***Miner Bot Payment**", description="Miner Bot cost 5$ and there is no refund⛏", color=0x1a94f0)
         embed.set_author(name='Why choose Miner Bot? Because its fun and can make your server active! It can roast you and block words', icon_url="")
-        embed.add_field(name="How to purchase? Pm Captain#2713 once you purchased you must give me Administrator so I can add it.", value="Why? Because it protects it from getting it leaked", inline=True)
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Why? Because it protects it from getting it leaked", inline=True)
         embed.set_footer(text='Thread posted by Captain#2713')
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('cookie'):   
-        await bot.send_message(message.channel, ":cookie:")      
+    if message.content.startswith('/rules'):
+        embed=discord.Embed(title=":unamused: Do not @ping or direct message [DM] the Staff with unsolicited messages.", description="They are people too! Please treat them as such!  Besides, repeated distraction will only delay the next update.", color=0x1a94f0)
+        embed.set_author(name='***Server Rules***', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)       
 
     if message.content.startswith('/info'):
-        await bot.send_message(message.channel, "Miner Bot™ @ coded by Captain#2713")
+        await bot.send_message(message.channel, "https://imgur.com/a/I5QIaEV")
 
 async def status_task():
     while True:
