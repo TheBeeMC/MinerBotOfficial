@@ -9,7 +9,7 @@ import logging
 
 command_prefix='/'
 bot = commands.Bot(command_prefix)
-description = 'Miner Bot™ @ coded by Captain#2713'
+description = ''
  
 @bot.event
 async def on_message(message):
