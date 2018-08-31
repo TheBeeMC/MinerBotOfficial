@@ -10,6 +10,12 @@ import logging
 command_prefix='/'
 bot = commands.Bot(command_prefix)
 description = ''
+
+@bot.command()
+async def repeat(ctx, times: int, content='THEY SEE ME MINER THEY ROLLIN'):
+    """Repeats a message multiple times."""
+    for i in range(times):
+        await ctx.send(content)
  
 @bot.event
 async def on_message(message):
@@ -46,7 +52,15 @@ async def on_message(message):
         embed.set_author(name='***Server Rules***', icon_url="")
         embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
         embed.set_footer(text='Thread posted by Captain#2713')
-        await bot.send_message(message.channel, embed=embed)       
+        await bot.send_message(message.channel, embed=embed)      
+        
+        
+    if message.content.startswith('/rules'):
+        embed=discord.Embed(title=":unamused: Do not @ping or direct message [DM] the Staff with unsolicited messages.", description="They are people too! Please treat them as such!  Besides, repeated distraction will only delay the next update.", color=0x1a94f0)
+        embed.set_author(name='***Server Rules***', icon_url="")
+        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)         
 
     if message.content.startswith('/info'):
         await bot.send_message(message.channel, "https://imgur.com/a/I5QIaEV")
