@@ -41,8 +41,9 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('fuck'):
-        await bot.send_message(message.channel, "Try not swearing next time ok? 😡")      
+    if message.content.startswith('<3'):
+        await bot.delete_message           
+        await bot.send_message(message.channel, ":heart: ")      
 
     if message.content.startswith('/info'):
         await bot.send_message(message.channel, "Miner Bot™ @ coded by Captain#2713")
