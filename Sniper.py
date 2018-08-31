@@ -7,47 +7,38 @@ import os
 import subprocess
 import logging
 
-command_prefix='+'
+command_prefix='$'
 bot = commands.Bot(command_prefix)
-description = 'sniper.py, coded by unpredictable'
+description = 'Miner Bot™ @ coded by Captain#2713'
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('+snipeadd'):
-            embed = discord.Embed(title="Let's walk you through the process of queueing a snipe.", description="DM the bot with 'beginqueue' to queue your snipe.", colour=0x1a94f0)
-            embed.set_author(name="Thanks for choosing sniper.py!", icon_url="")
-            embed.add_field(name="Enjoy your new name!", value="-trinity and iliyan")
-            embed.set_footer(text="sniper.py™ © coded by unpredictable")
+    if message.content.startswith('$status'):
+            embed = discord.Embed(title="Miner Bot Status: 🔵 Online", description="Everything is healthy", colour=0x1a94f0)
+            embed.set_footer(text="Miner Bot™ @ coded by Captain#2713")
             await bot.send_message(message.channel, embed=embed)
 
     if message.content.startswith('+help'):
-        embed=discord.Embed(title="+snipeadd: queues a snipe", description="+invite: Prints an invite link for the bot.", color=0x1a94f0)
+        embed=discord.Embed(title="Miner Bot Help", description="+invite: Prints an invite link for the bot.", color=0x1a94f0)
         embed.set_author(name='Commands', icon_url="")
         embed.add_field(name="+help: Brings up list of commands", value="+info: Prints info about the bot.", inline=True)
-        embed.set_footer(text='coded by unpredictable')
+        embed.set_footer(text='Miner Bot™ @ coded by Captain#2713')
         await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('+invite'):
-        await bot.send_message(message.channel, "**Here's the invite for the bot:** INVITE")
+    if message.content.startswith('+Loltest'):
+        await bot.send_message(message.channel, "")
         print('Bot has been added to new server')
 
     if message.content.startswith('+info'):
-        await bot.send_message(message.channel, "Coded by unpredictable. Bot hosted on Heroku, coded with python3 and Discord.PY.")
+        await bot.send_message(message.channel, "Miner Bot™ @ coded by Captain#2713")
 
 async def status_task():
     while True:
-        await bot.change_presence(game=discord.Game(name="with og names"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="+help | coded by ili"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="with my sniper"))
-        await asyncio.sleep(10)
-        await bot.change_presence(game=discord.Game(name="with a fidget spinner"))
-        await asyncio.sleep(10)
+        await bot.change_presence(game=discord.Game(name="Miner"))
 
 @bot.event
 async def on_ready():
-    print('sniper.py coded by unpredictable')
+    print('Miner Bot™ @ coded by Captain#2713')
     print('------')
     print('INFO')
     print('------')
