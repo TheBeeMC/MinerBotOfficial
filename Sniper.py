@@ -41,7 +41,7 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('<3'):
+    if message.content.startswith('love'):
         await bot.delete_message           
         await bot.send_message(message.channel, ":heart: ")      
 
