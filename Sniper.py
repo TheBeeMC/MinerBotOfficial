@@ -7,7 +7,7 @@ import os
 import subprocess
 import logging
 
-bot = commands.Bot(command_prefix='/', description=description)
+bot = commands.Bot(command_prefix='/')
 
 @bot.command()
 async def repeat(ctx, times: int, content='THEY SEE ME MINER THEY ROLLIN'):
