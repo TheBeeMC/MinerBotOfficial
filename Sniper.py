@@ -26,11 +26,11 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)
         
         
-    if message.content.startswith('lolgame'):
-        embed=discord.Embed(title="***Miner Bot is now back online***", description="🔵", color=0x1a94f0)
-        embed.set_author(name='Service: Healthy 🔵', icon_url="")
-        embed.add_field(name="Thank you for your patience", value="Bot is now back online!", inline=True)
-        embed.set_footer(text='Posted by Captain#2713')
+    if message.content.startswith('/miner'):
+        embed=discord.Embed(title="https://discord.gg/kJGFfKA", description="⛏", color=0x1a94f0)
+        embed.set_author(name='Miner Bot Discord: 👷', icon_url="")
+        embed.add_field(name="https://discord.io/Miner", value="Want to buy the bot? Join our discord and pm Captain#2713", inline=True)
+        embed.set_footer(text='Miner Bot Status: 🔵 Online')
         await bot.send_message(message.channel, embed=embed)        
 
       
