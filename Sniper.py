@@ -25,9 +25,9 @@ async def on_message(message):
         embed.set_footer(text='Miner Bot Status: 🔵 Online')
         await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('FUCK'):
-        await bot.send_message(message.channel, "Don't swear")
-        print('Bot has been added to new server')
+      
+    if message.content.startswith('fuck', 'FUCKING', 'FUCK', 'FuCk', 'fucking', 'NIGGER', 'NIGGA', 'nigga', 'L'):
+        await bot.send_message(message.channel, "Try not swearing next time ok? 😡")      
 
     if message.content.startswith('+info'):
         await bot.send_message(message.channel, "Miner Bot™ @ coded by Captain#2713")
