@@ -42,7 +42,7 @@ async def on_message(message):
 
       
     if message.content.startswith('love'):
-        await bot.delete_message           
+        await bot.msg.delete()       
         await bot.send_message(message.channel, ":heart: ")      
 
     if message.content.startswith('/info'):
