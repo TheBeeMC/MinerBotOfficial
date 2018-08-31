@@ -31,7 +31,14 @@ async def on_message(message):
         embed.set_author(name='Miner Bot Discord: 👷', icon_url="")
         embed.add_field(name="https://discord.io/Miner", value="Want to buy the bot? Join our discord and pm Captain#2713", inline=True)
         embed.set_footer(text='Miner Bot Status: 🔵 Online')
-        await bot.send_message(message.channel, embed=embed)        
+        await bot.send_message(message.channel, embed=embed)  
+        
+    if message.content.startswith('/payment'):
+        embed=discord.Embed(title="***Miner Bot Payment**", description="Miner Bot cost 5$ and there is no refund⛏", color=0x1a94f0)
+        embed.set_author(name='Why choose Miner Bot? Because its fun and can make your server active! It can roast you and block words', icon_url="")
+        embed.add_field(name="How to purchase? Pm Captain#2713 once you purchased you must give me Administrator so I can add it.", value="Why? Because it protects it from getting it leaked", inline=True)
+        embed.set_footer(text='Thread posted by Captain#2713')
+        await bot.send_message(message.channel, embed=embed)           
 
       
     if message.content.startswith('fuck'):
