@@ -50,7 +50,7 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)         
 
     if message.content.startswith('/names'):
-        await bot.send_message(message.channel, "The name ```Really``` Availability 10/12/2018 @ 8:53:55 AM")
+        await bot.send_message(message.channel, "Minecraft Username: **Really** Availability 10/12/2018 @ 8:53:55 AM")
 
 async def status_task():
     while True:
