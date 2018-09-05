@@ -49,8 +49,8 @@ async def on_message(message):
         embed.set_footer(text='Thread posted by Captain#2713')
         await bot.send_message(message.channel, embed=embed)         
 
-    if message.content.startswith('/info'):
-        await bot.send_message(message.channel, "https://imgur.com/a/I5QIaEV")
+    if message.content.startswith('/names'):
+        await bot.send_message(message.channel, "The name ```Really``` Availability 10/12/2018 @ 8:53:55 AM")
 
 async def status_task():
     while True:
