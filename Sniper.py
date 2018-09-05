@@ -13,7 +13,7 @@ bot = commands.Bot(command_prefix='/')
 @bot.event
 async def on_message(message):
     if message.content.startswith('/status'):
-            embed = discord.Embed(title="Miner Bot Status: 🔵 Online", description="Everything is healthy", colour=0x1a94f0)
+            embed = discord.Embed(title="Apple Temp", description="Everything is healthy", colour=0x1a94f0)
             embed.set_footer(text="Miner Bot™ @ coded by Captain#2713")
             await bot.send_message(message.channel, embed=embed)
 
@@ -25,11 +25,11 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)
         
         
-    if message.content.startswith('/miner'):
-        embed=discord.Embed(title="https://discord.gg/kJGFfKA", description="⛏", color=0x1a94f0)
-        embed.set_author(name='Miner Bot Discord: 👷', icon_url="")
-        embed.add_field(name="https://discord.io/Miner", value="Want to buy the bot? Join our discord and pm Captain#2713", inline=True)
-        embed.set_footer(text='Miner Bot Status: 🔵 Online')
+    if message.content.startswith('/verify'):
+        embed=discord.Embed(title="***Discord Verification***", color=0x1a94f0)
+        embed.set_author(name='Apple Temp', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
+        embed.add_field(name="Your Discord account will now be under staff approval", inline=True)
+                embed.set_footer(text='Verified at (Staff Approval)')
         await bot.send_message(message.channel, embed=embed)  
         
     if message.content.startswith('/payment'):
