@@ -29,7 +29,7 @@ async def on_message(message):
         embed=discord.Embed(title="***Discord Verification***", color=0x1a94f0)
         embed.set_author(name='Apple Temp', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
         embed.add_field(name="Your Discord account will now be under staff approval", inline=True)
-                embed.set_footer(text='Verified at Staff Approval')
+        embed.set_footer(text='This could take up to 1 day to be verified')
         await bot.send_message(message.channel, embed=embed)  
         
     if message.content.startswith('/payment'):
