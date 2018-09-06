@@ -35,10 +35,9 @@ async def on_message(message):
 
       
     if message.content.startswith('/verify'):
-        embed=discord.Embed(title="Discord Verification", description="Your Discord account will now be under staff approval", color=0x1a94f0)
+        embed=discord.Embed(title="https://Discord Verification", description="Your Discod account has not been succesfully linked please check your token!", color=0x1a94f0)
         embed.set_author(name='Apple Temp', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
-        embed.add_field(name="Please be patience because staff have to review", value="This could take up to 1 day to be verified", inline=True)
-        embed.set_footer(text='Verified on 00/00/0000')
+        embed.set_footer(text='Verified at *****************')
         await bot.send_message(message.channel, embed=embed)      
         
         
