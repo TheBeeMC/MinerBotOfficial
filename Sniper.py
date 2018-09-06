@@ -34,10 +34,11 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('/verify'):
-        embed=discord.Embed(title="__**Discord Verification**__", description="Please enter a valid verification code! It should be 16 characters long.", color=0x1a94f0)
+    if message.content.startswith('.apple verify'):
+        embed=discord.Embed(title="__**Discord Verification**__", description="Please enter a verification code!", color=0x1a94f0)
         embed.set_author(name='Apple Temp', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
-        embed.set_footer(text='Verified at Day 0 2018 EST')
+        embed.add_field(name="`TypeError: Cannot read property 'length' of`", value="`undefined`", inline=True)
+        embed.set_footer(text='Generated at: Unknown Time (Eastern Daylight Time)')
         await bot.send_message(message.channel, embed=embed)      
         
         
