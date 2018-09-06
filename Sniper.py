@@ -35,9 +35,9 @@ async def on_message(message):
 
       
     if message.content.startswith('/verify'):
-        embed=discord.Embed(title="https://Discord Verification", description="Your Discod account has not been succesfully linked please check your token!", color=0x1a94f0)
+        embed=discord.Embed(title="__**Discord Verification**__", description="Please enter a valid verification code! It should be 16 characters long.", color=0x1a94f0)
         embed.set_author(name='Apple Temp', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
-        embed.set_footer(text='Verified at *****************')
+        embed.set_footer(text='Verified at Day 0 2018 EST')
         await bot.send_message(message.channel, embed=embed)      
         
         
@@ -49,11 +49,9 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)         
 
     if message.content.startswith('/names'):
-        await bot.send_message(message.channel, "Minecraft Username: **Fail** Time of Availability 9/29/2018 @ 4:46:19 PM")
+        await bot.send_message(message.channel, "The name `really` is dropping and is currently available!")
 
-async def status_task():
-    while True:
-        await bot.change_presence(game=discord.Game(name="Miner"))
+
 
 @bot.event
 async def on_ready():
