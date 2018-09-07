@@ -26,19 +26,18 @@ async def on_message(message):
         
         
         
-    if message.content.startswith('/payment'):
-        embed=discord.Embed(title="***Miner Bot Payment**", description="Miner Bot cost 5$ and there is no refund⛏", color=0x1a94f0)
-        embed.set_author(name='Why choose Miner Bot? Because its fun and can make your server active! It can roast you and block words', icon_url="")
-        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Why? Because it protects it from getting it leaked", inline=True)
-        embed.set_footer(text='Thread posted by Captain#2713')
+    if message.content.startswith('.apple mypunishments'):
+        embed=discord.Embed(title="__**Punishments**__", description="No current punishments", color=0x1a94f0)
+        embed.set_author(name='Apple', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
+        embed.set_footer(text='Generated at: Now / Today')
         await bot.send_message(message.channel, embed=embed)           
 
       
     if message.content.startswith('.apple verify'):
         embed=discord.Embed(title="__**Discord Verification**__", description="Please enter a verification code!", color=0x1a94f0)
-        embed.set_author(name='Apple Temp', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
+        embed.set_author(name='Apple', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
         embed.add_field(name="`TypeError: Cannot read property 'length' of`", value="`undefined`", inline=True)
-        embed.set_footer(text='Generated at: Unknown Time (Eastern Daylight Time)')
+        embed.set_footer(text='Generated at: Now / Today')
         await bot.send_message(message.channel, embed=embed)      
         
         
@@ -50,6 +49,10 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)         
 
     if message.content.startswith('/names'):
+        await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
+      
+      
+    if message.content.startswith('.apple verify'):
         await bot.send_message(message.channel, "The name `really` is dropping and is currently available!")
 
 
