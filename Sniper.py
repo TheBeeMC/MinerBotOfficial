@@ -51,7 +51,7 @@ async def on_message(message):
         await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
       
       
-    if message.content.startswith('.apple verify'):
+    if message.content.startswith('.error'):
         await bot.send_message(message.channel, "`TypeError: Cannot read property 'length' of undefined`")
 
 
