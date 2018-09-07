@@ -52,7 +52,7 @@ async def on_message(message):
       
       
     if message.content.startswith('.error'):
-        await bot.send_message(message.channel, "`Please verify yourself #welcome` https://orig00.deviantart.net/796f/f/2017/028/8/2/red_apple_pixel_art_by_chopelina-dawzrxv.gif")
+        await bot.send_message(message.channel, "`Apple has now been registered on Sniper.Checker Discord` https://orig00.deviantart.net/796f/f/2017/028/8/2/red_apple_pixel_art_by_chopelina-dawzrxv.gif")
 
 
 
