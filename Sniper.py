@@ -52,7 +52,7 @@ async def on_message(message):
       
       
     if message.content.startswith('.error'):
-        await bot.send_message(message.channel, "`TypeError: Cannot read property 'length' of undefined`")
+        await bot.send_message(message.channel, "`Apple now registered to Sniper.Checker Discord` https://orig00.deviantart.net/796f/f/2017/028/8/2/red_apple_pixel_art_by_chopelina-dawzrxv.gif")
 
 
 
