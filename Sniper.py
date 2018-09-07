@@ -27,16 +27,15 @@ async def on_message(message):
         
         
     if message.content.startswith('.apple mypunishments'):
-        embed=discord.Embed(title="__**Punishments**__", description="No current punishments", color=0x1a94f0)
-        embed.set_author(name='Apple', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
+        embed=discord.Embed(title="Punishments", description="[PUNISHMENTS] You do not have any current punishments", color=0x1a94f0)
+        embed.set_author(name='Apple', icon_url="https://image.sportsmansguide.com/dimage/reticle_107_ts.gif")
         embed.set_footer(text='Generated at: Now / Today')
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('.apple verify'):
-        embed=discord.Embed(title="__**Discord Verification**__", description="Please enter a verification code!", color=0x1a94f0)
-        embed.set_author(name='Apple', icon_url="https://orig00.deviantart.net/369f/f/2008/282/3/9/8_bit_apple_day_by_monketron.jpg")
-        embed.add_field(name="`TypeError: Cannot read property 'length' of`", value="`undefined`", inline=True)
+    if message.content.startswith('.apple verify o75oD8ujrH7VVxLj'):
+        embed=discord.Embed(title="Discord Verification", description="Your Discord account has successfully been linked to `You are now under staff pending please wait until a staff checks`!", color=0x1a94f0)
+        embed.set_author(name='Apple', icon_url="https://image.sportsmansguide.com/dimage/reticle_107_ts.gif")
         embed.set_footer(text='Generated at: Now / Today')
         await bot.send_message(message.channel, embed=embed)      
         
@@ -53,7 +52,7 @@ async def on_message(message):
       
       
     if message.content.startswith('.apple verify'):
-        await bot.send_message(message.channel, "The name `really` is dropping and is currently available!")
+        await bot.send_message(message.channel, "`TypeError: Cannot read property 'length' of undefined`")
 
 
 
