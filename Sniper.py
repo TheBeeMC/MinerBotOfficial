@@ -3,15 +3,7 @@ import json
 
 client = discord.Client()
 
-try:
-    config = json.loads(open('config.json').read())
 
-    token = config['bot_token']
-    server_id = config['server_id']
-    role_name = config['role_name']
-except:
-    print("FATAL ERROR: Couldn't read config file")
-    exit()
 
 
 @client.event
