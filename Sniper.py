@@ -34,9 +34,9 @@ async def on_message(message):
 
       
     if message.content.startswith('.verify'):
-        embed=discord.Embed(title="Discord Verification", description="Your Discord account has successfully been linked to `You are now under staff pending please wait until a staff checks`!", color=0x1a94f0)
-        embed.set_author(name='Apple', icon_url="https://image.sportsmansguide.com/dimage/reticle_107_ts.gif")
-        embed.set_footer(text='Generated at: Now / Today')
+        embed=discord.Embed(title="Discord Verification", description="Your discord account has not been succesfully linked `.verify (CODE)`!", color=0x1a94f0)
+        embed.set_author(name='Dragonfruit', icon_url="https://orig00.deviantart.net/89b1/f/2018/119/7/6/dragon_fruit_pixel_art_by_hikary_starrysky-dca5kt8.png")
+        embed.set_footer(text='Generated From: Dragonfruit Bot')
         await bot.send_message(message.channel, embed=embed)      
         
         
