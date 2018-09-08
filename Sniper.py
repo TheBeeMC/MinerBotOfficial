@@ -1,67 +1,95 @@
-# sniper.py
 import discord
-from discord.ext import commands
-import random
-import asyncio
-import os
-import subprocess
-import logging
+import json
 
-bot = commands.Bot(command_prefix='/')
+client = discord.Client()
 
- 
-@bot.event
-async def on_message(message):
-    if message.content.startswith('/status'):
-            embed = discord.Embed(title="Apple Temp", description="Everything is healthy", colour=0x1a94f0)
-            embed.set_footer(text="Miner Bot™ @ coded by Captain#2713")
-            await bot.send_message(message.channel, embed=embed)
+try:
+    config = json.loads(open('config.json').read())
 
-    if message.content.startswith('/help'):
-        embed=discord.Embed(title="***Miner Bot Help***", description="Bot Cost: 5$", color=0x1a94f0)
-        embed.set_author(name='Commands', icon_url="")
-        embed.add_field(name="***Coming soon***", value="/status to check if Miner is online", inline=True)
-        embed.set_footer(text='Miner Bot Status: 🔵 Online')
-        await bot.send_message(message.channel, embed=embed)
-        
-        
-        
-    if message.content.startswith('.apple mypunishments'):
-        embed=discord.Embed(title="Punishments", description="[PUNISHMENTS] You do not have any current punishments", color=0x1a94f0)
-        embed.set_author(name='Apple', icon_url="https://image.sportsmansguide.com/dimage/reticle_107_ts.gif")
-        embed.set_footer(text='Generated at: Now / Today')
-        await bot.send_message(message.channel, embed=embed)           
-
-      
-    if message.content.startswith('.apple verify o75oD8ujrH7VVxLj'):
-        embed=discord.Embed(title="Discord Verification", description="Your Discord account has successfully been linked to `You are now under staff pending please wait until a staff checks`!", color=0x1a94f0)
-        embed.set_author(name='Apple', icon_url="https://image.sportsmansguide.com/dimage/reticle_107_ts.gif")
-        embed.set_footer(text='Generated at: Now / Today')
-        await bot.send_message(message.channel, embed=embed)      
-        
-        
-    if message.content.startswith('/rules'):
-        embed=discord.Embed(title=":unamused: Do not @ping or direct message [DM] the Staff with unsolicited messages.", description="They are people too! Please treat them as such!  Besides, repeated distraction will only delay the next update.", color=0x1a94f0)
-        embed.set_author(name='***Server Rules***', icon_url="")
-        embed.add_field(name=":thumbsdown: The following is 100% prohibited:", value="Please respect the rules", inline=True)
-        embed.set_footer(text='Thread posted by Captain#2713')
-        await bot.send_message(message.channel, embed=embed)         
-
-    if message.content.startswith('/names'):
-        await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
-      
-      
-    if message.content.startswith('.error'):
-        await bot.send_message(message.channel, "`Apple has now been registered on Sniper.Checker Discord` https://orig00.deviantart.net/796f/f/2017/028/8/2/red_apple_pixel_art_by_chopelina-dawzrxv.gif")
+    token = config['bot_token']
+    server_id = config['server_id']
+    role_name = config['role_name']
+except:
+    print("FATAL ERROR: Couldn't read config file")
+    exit()
 
 
-
-@bot.event
+@client.event
 async def on_ready():
-    print('Miner Bot™ @ coded by Captain#2713')
+    print("SD verification bot")
+    print('Logged in as %s' %client.user.name)
+    print("Client User ID: %s" %client.user.name)
     print('------')
-    print('INFO')
-    print('------')
-    print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-        
-bot.run(os.getenv('TOKEN'))
+
+@client.event
+async def on_message(message):
+    if message.content.lower().startswith('!authorize'):
+        try:
+            parameter = message.content.lower().split(" ")[1]
+        except:
+            print("Failed to authorize user %s due to invalid paramaters" % (str(message.author)))
+            await client.send_message(message.author, "Invalid parameters")
+            return
+
+        try:
+            ver_lines = []
+            un_lines = open('verification.txt', 'r').readlines()
+            for line in un_lines:
+                if '\n' in line:
+                    ver_lines.append(line.split('\n')[0])
+                else:
+                    ver_lines.append(line)
+
+        except:
+            print("Internal server error, could not read verification file")
+            await client.send_message(message.author, "Internal server error")
+            return
+
+        if parameter in ver_lines:
+            server = client.get_server(server_id)
+            try:
+                role = discord.utils.get(server.roles, name=role_name)
+            except:
+                print("Internal server error, could not find role")
+                await client.send_message(message.author, "Internal server error")
+                return
+
+            if role == None:
+                print("Internal server error, could not find role")
+                await client.send_message(message.author, "Internal server error")
+                return
+
+            author_id = message.author.id
+            user = get_user(server, author_id)
+
+            if user == 'none':
+                print("Could not find user %s" % (str(message.author)))
+                await client.send_message(message.author, "Failed to authorize user")
+                return
+
+            if role_name in user.roles:
+                print("User %s is already authorized" % (str(message.author)))
+                await client.send_message(message.author, "User is already authorized")
+                return
+
+            await client.add_roles(user, role)
+            print("Successfully authorized user %s with parameter %s" % (str(message.author), parameter))
+            await client.send_message(message.author, "Successfully authorized user")
+            return
+        else:
+            print("Failed to authorize %s with parameter %s" %(str(message.author), parameter))
+            await client.send_message(message.author, "Failed to authorize user")
+            return
+
+def get_user(server, id):
+    for member in server.members:
+        if member.id == id:
+            user = member
+            return user
+    return 'none'
+
+try:
+    client.run(os.getenv('TOKEN'))
+except:
+    print("FATAL ERROR: Failed to connect to Discord application.")
+    exit()
