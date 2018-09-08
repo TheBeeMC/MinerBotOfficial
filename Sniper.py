@@ -13,8 +13,8 @@ bot = commands.Bot(command_prefix='/')
 @bot.event
 async def on_message(message):
     if message.content.startswith('/status'):
-            embed = discord.Embed(title="Apple Temp", description="Everything is healthy", colour=0x1a94f0)
-            embed.set_footer(text="Miner Bot™ @ coded by Captain#2713")
+            embed = discord.Embed(title="Dragonfruit", description="The name `really` is dropping and has received no queries on our availability checker!", colour=0x1a94f0)
+            embed.set_footer(text="Generated From: Dragonfruit Bot")
             await bot.send_message(message.channel, embed=embed)
 
     if message.content.startswith('/help'):
