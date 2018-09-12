@@ -52,8 +52,8 @@ async def on_message(message):
         await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
       
       
-    if message.content.startswith('.error'):
-        await bot.send_message(message.channel, "`Please verify yourself using .verify` https://orig00.deviantart.net/796f/f/2017/028/8/2/red_apple_pixel_art_by_chopelina-dawzrxv.gif")
+    if message.content.startswith('[CA] '):
+        await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
 
 
 
