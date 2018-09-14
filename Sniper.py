@@ -62,6 +62,13 @@ async def on_message(message):
     if message.content.startswith('/names'):
         await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
       
+    if message.content.lower().startswith('coin'): #Coinflip 50/50% chance kopf oder zahl
+        choice = random.randint(1,2)
+        if choice == 1:
+            await client.add_reaction(message, '🌑 Head')
+        if choice == 2:
+            await client.add_reaction(message, '🌕 Tails')      
+      
       
     if message.content.startswith('[CA] '):
         await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
