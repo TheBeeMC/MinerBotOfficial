@@ -17,6 +17,14 @@ async def on_message(message):
             embed = discord.Embed(title="#name-dropping-alert", description="The name `Jeans` is dropping and has received no queries on our Check Availability!", colour=0x1a94f0)
             embed.set_footer(text="Generated From: This is a automatic message")
             await bot.send_message(message.channel, embed=embed)
+      
+      
+    if message.content.startswith('t2xm3oxX'):
+            await bot.delete_message(message)
+            embed = discord.Embed(title="#verify-yourself", description="To verify yourself please check settings and find a code like `.verify (CODE)` Please notice this isn't yet done as the website isn't 100% Up!", colour=0x1a94f0)
+            embed.set_footer(text="Generated From: This is a automatic message")
+            await bot.send_message(message.channel, embed=embed)      
+    
 
     if message.content.startswith('/help'):
         embed=discord.Embed(title="***Miner Bot Help***", description="Bot Cost: 5$", color=0x1a94f0)
