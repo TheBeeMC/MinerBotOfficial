@@ -61,13 +61,7 @@ async def on_message(message):
 
     if message.content.startswith('/names'):
         await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
-      
-    if message.content.lower().startswith('coin'): #Coinflip 50/50% chance kopf oder zahl
-        choice = random.randint(1,2)
-        if choice == 1:
-            await client.add_reaction(message, '🌑 Wrong')
-        if choice == 2:
-            await client.add_reaction(message, '🌕 Correct')      
+       
       
       
     if message.content.startswith('[CA] '):
@@ -82,6 +76,6 @@ async def on_ready():
     print('INFO')
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-    await bot.change_presence(game=discord.Game(name="Somewhere in the database"))
+    await bot.change_presence(game=discord.Game(name="Weeee! I'll be tweeting out some important or popular snipes that MCGiftSniper gets! Get your own OG now by creating a support ticket!"))
         
 bot.run(os.getenv('TOKEN'))
