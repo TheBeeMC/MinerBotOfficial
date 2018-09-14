@@ -76,6 +76,6 @@ async def on_ready():
     print('INFO')
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-    await bot.change_presence(game=discord.Game(name="Weeee! I'll be tweeting out some important or popular snipes that MCGiftSniper gets! Get your own OG now by creating a support ticket!"))
+    await bot.change_presence(game=discord.Game(name="Connected to the MCGiftSniper database"))
         
 bot.run(os.getenv('TOKEN'))
