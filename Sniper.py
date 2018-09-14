@@ -8,7 +8,9 @@ import subprocess
 import logging
 
 bot = commands.Bot(command_prefix='/')
-await client.change_presence(game=discord.Game(name="Somewhere in the database"))
+
+
+
 
  
 @bot.event
@@ -73,5 +75,6 @@ async def on_ready():
     print('INFO')
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
+    await bot.change_presence(game=discord.Game(name="Somewhere in the database"))
         
 bot.run(os.getenv('TOKEN'))
