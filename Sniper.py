@@ -8,6 +8,7 @@ import subprocess
 import logging
 
 bot = commands.Bot(command_prefix='/')
+await client.change_presence(game=discord.Game(name="Somewhere in the database"))
 
  
 @bot.event
