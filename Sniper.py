@@ -65,9 +65,9 @@ async def on_message(message):
     if message.content.lower().startswith('coin'): #Coinflip 50/50% chance kopf oder zahl
         choice = random.randint(1,2)
         if choice == 1:
-            await client.add_reaction(message, '🌑 Head')
+            await client.add_reaction(message, '🌑 Wrong')
         if choice == 2:
-            await client.add_reaction(message, '🌕 Tails')      
+            await client.add_reaction(message, '🌕 Correct')      
       
       
     if message.content.startswith('[CA] '):
@@ -82,6 +82,6 @@ async def on_ready():
     print('INFO')
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-    await bot.change_presence(game=discord.Game(name="/home/sniper/"))
+    await bot.change_presence(game=discord.Game(name="Somewhere in the database"))
         
 bot.run(os.getenv('TOKEN'))
