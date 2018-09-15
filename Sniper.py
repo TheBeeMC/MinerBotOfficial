@@ -24,8 +24,8 @@ async def on_message(message):
       
     if message.content.startswith('t2xm3oxX'):
             await bot.delete_message(message)
-            embed = discord.Embed(title="#verify-yourself", description="To verify yourself please check settings and find a code like `.verify (CODE)` Please notice this isn't yet done as the website isn't 100% Up!", colour=0x1a94f0)
-            embed.set_footer(text="Generated From: This is a automatic message")
+            embed = discord.Embed(title="#verify-yourself", description="To verify yourself please wait until a staff moves you. Pming a staff to be verified it not allowed and will result in a `PERMANENT BAN`", colour=0x1a94f0)
+            embed.set_footer(text="Generated From: #verify-wait")
             await bot.send_message(message.channel, embed=embed)      
     
 
@@ -45,10 +45,10 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('.verify'):
-        embed=discord.Embed(title="Discord Verification", description="Your discord account has not been succesfully linked `Please use .verify (CODE)`!", color=0x1a94f0)
-        embed.set_author(name='Dragonfruit', icon_url="https://orig00.deviantart.net/89b1/f/2018/119/7/6/dragon_fruit_pixel_art_by_hikary_starrysky-dca5kt8.png")
-        embed.set_footer(text='Generated From: Dragonfruit Bot')
+    if message.content.startswith('.userhasbeenverifiedX2x'):
+        embed=discord.Embed(title="Discord Verification", description="A discord account has been succesfully linked `By a Staff Member`!", color=0x1a94f0)
+        embed.set_author(name='MCGiftSniper', icon_url="https://mbtskoudsalg.com/images/discord-logo-png-transparent-background-1.png")
+        embed.set_footer(text='Generated From: #verify-wat')
         await bot.send_message(message.channel, embed=embed)      
         
         
@@ -69,11 +69,26 @@ async def on_message(message):
     if message.content.startswith('https://'):
         await bot.delete_message(message)
         await bot.send_message(message.channel, ".gift warn {0.author.mention} `for posting links in chat`".format(message))
-        embed=discord.Embed(title="Discord Verification", description="Your discord account has not been succesfully linked `Please use .verify (CODE)`!", color=0x1a94f0)
-        embed.set_author(name='Dragonfruit', icon_url="https://orig00.deviantart.net/89b1/f/2018/119/7/6/dragon_fruit_pixel_art_by_hikary_starrysky-dca5kt8.png")
-        embed.set_footer(text='Generated From: Dragonfruit Bot')
-        await bot.send_message(message.channel, embed=embed)      
-      
+        embed=discord.Embed(title="Warning System", description="User has been warned for `posting links in chat`!", color=0x1a94f0)
+        embed.set_author(name='MCGiftSniper', icon_url="")
+        embed.set_footer(text='Generated From: This is a automatic message')
+        await bot.send_message(message.channel, embed=embed)
+        
+    if message.content.startswith('http://'):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, ".gift warn {0.author.mention} `for posting links in chat`".format(message))
+        embed=discord.Embed(title="Warning System", description="User has been warned for `posting links in chat`!", color=0x1a94f0)
+        embed.set_author(name='MCGiftSniper', icon_url="")
+        embed.set_footer(text='Generated From: This is a automatic message')
+        await bot.send_message(message.channel, embed=embed)    
+        
+    if message.content.startswith('https:/'):
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, ".gift warn {0.author.mention} `for posting links in chat`".format(message))
+        embed=discord.Embed(title="Warning System", description="User has been warned for `posting links in chat`!", color=0x1a94f0)
+        embed.set_author(name='MCGiftSniper', icon_url="")
+        embed.set_footer(text='Generated From: This is a automatic message')
+        await bot.send_message(message.channel, embed=embed)          
       
 @bot.event
 async def on_ready():
