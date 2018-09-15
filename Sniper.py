@@ -61,10 +61,7 @@ async def on_message(message):
 
     if message.content.startswith('/names'):
         await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
-       
-     if message.content.startswith('/nexowx'):
-        await bot.delete_message(message)    
-        await bot.send_message(message.channel, "The name `Legals` was dropping and has been sniped on our checker!")     
+    
       
     if message.content.startswith('[CA] '):
         await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
