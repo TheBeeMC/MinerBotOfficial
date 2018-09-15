@@ -67,8 +67,9 @@ async def on_message(message):
         await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
 
     if message.content.startswith('https://'):
-        await bot.send_message(message.channel, ".warn {0.author.mention} for posting links in chat".format(message))
-        await bot.send_message(message.channel, "User has been warned by {0.author.mention}".format(message))
+        await bot.delete_message(message)
+        await bot.send_message(message.channel, ".warn {0.author.mention} `for posting links in chat`".format(message))
+        await bot.send_message(message.channel, "User has been warned for `posting links in chat`".format(message))
       
       
 @bot.event
