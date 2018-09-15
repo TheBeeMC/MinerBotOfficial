@@ -61,7 +61,7 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)         
 
     if message.content.startswith('/names'):
-        await bot.send_message(message.channel, "The name `really` is dropping and has received no queries on our availability checker!")
+        await bot.send_message(message.channel, "The name `Bethany` is dropping and has received no queries on our availability checker!")
     
       
     if message.content.startswith('[CA] '):
