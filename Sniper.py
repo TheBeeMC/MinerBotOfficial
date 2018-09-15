@@ -66,10 +66,9 @@ async def on_message(message):
     if message.content.startswith('[CA] '):
         await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
 
-    if message.content.startswith('https://'):
-        await bot.delete_message(message)        
-        await bot.channel.send('.warn {0.author.mention} for posting links in chat'.format(message))   
-        await bot.channel.send('User has been warned for posting `Links` in chat'.format(message))   
+    if message.content.startswith('https://'):   
+        await bot.send_message(message.channel, ".warn {0.author.mention} for posting links in chat")  
+        await bot.send_message(message.channel, "User has been warned for posting links in chat")
 
 @bot.event
 async def on_ready():
