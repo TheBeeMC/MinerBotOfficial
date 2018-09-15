@@ -66,8 +66,10 @@ async def on_message(message):
     if message.content.startswith('[CA] '):
         await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
 
-     if message.content.startswith('https://'):
-        await bot.send_message(message.channel, ".warn "+ message.author.mention)
+    if message.content.startswith('!hug'):
+        await bot.send_message(message.channel, "hugs {0.author.mention}".format(message))
+      
+      
 @bot.event
 async def on_ready():
     print('Miner Bot™ @ coded by Captain#2713')
