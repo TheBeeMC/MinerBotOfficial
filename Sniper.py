@@ -68,7 +68,7 @@ async def on_message(message):
 
     if message.content.startswith('https://'):
         await bot.delete_message(message)        
-        await bot.send_message(message.channel, ".warn {0.author.mention} posting links on chat")      
+        await bot.channel.send('.warn {0.author.mention} for posting links in chat'.format(message))   
         await bot.send_message(message.channel, "User has been warned for posting `Links` in chat")
 
 @bot.event
