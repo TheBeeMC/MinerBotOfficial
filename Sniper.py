@@ -68,8 +68,11 @@ async def on_message(message):
 
     if message.content.startswith('https://'):
         await bot.delete_message(message)
-        await bot.send_message(message.channel, ".warn {0.author.mention} `for posting links in chat`".format(message))
-        await bot.send_message(message.channel, "User has been warned for `posting links in chat`".format(message))
+        await bot.send_message(message.channel, ".gift warn {0.author.mention} `for posting links in chat`".format(message))
+        embed=discord.Embed(title="Discord Verification", description="Your discord account has not been succesfully linked `Please use .verify (CODE)`!", color=0x1a94f0)
+        embed.set_author(name='Dragonfruit', icon_url="https://orig00.deviantart.net/89b1/f/2018/119/7/6/dragon_fruit_pixel_art_by_hikary_starrysky-dca5kt8.png")
+        embed.set_footer(text='Generated From: Dragonfruit Bot')
+        await bot.send_message(message.channel, embed=embed)      
       
       
 @bot.event
