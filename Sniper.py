@@ -67,8 +67,11 @@ async def on_message(message):
         await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
 
     if message.content.startswith('https://'):
-        await bot.send_message(message.channel, ".warn user `Posted Links`")      
-        await bot.send_message(message.channel, ".warn user `Warn: You have recieved a warning for 'links'`")      
+        await bot.delete_message(message)        
+        await bot.send_message(message.channel, ".warn {0.author.mention} posting links on chat")      
+            embed = discord.Embed(title="MCGiftSniper", description="User has been warned for `Posting links`", colour=0x1a94f0)
+            embed.set_footer(text="Generated From: This is a automatic message")
+            await bot.send_message(message.channel, embed=embed)    
 
 @bot.event
 async def on_ready():
