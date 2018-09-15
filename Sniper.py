@@ -46,6 +46,7 @@ async def on_message(message):
 
       
     if message.content.startswith('.userhasbeenverifiedX2x'):
+        await bot.delete_message(message)     
         embed=discord.Embed(title="Discord Verification", description="A discord account has been succesfully linked `By a Staff Member`!", color=0x1a94f0)
         embed.set_author(name='MCGiftSniper', icon_url="https://mbtskoudsalg.com/images/discord-logo-png-transparent-background-1.png")
         embed.set_footer(text='Generated From: #verify-wat')
