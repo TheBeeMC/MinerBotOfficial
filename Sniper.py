@@ -15,9 +15,9 @@ bot = commands.Bot(command_prefix='/')
  
 @bot.event
 async def on_message(message):
-    if message.content.startswith('/status'):
+    if message.content.startswith('/sfnanMAEms'):
             await bot.delete_message(message)
-            embed = discord.Embed(title="#name-dropping-alert", description="The name `Jeans` is dropping and has received no queries on our Check Availability!", colour=0x1a94f0)
+            embed = discord.Embed(title="#name-dropping-alert", description="The name `Bethany` is dropping and has received no queries on our Check Availability!", colour=0x1a94f0)
             embed.set_footer(text="Generated From: This is a automatic message")
             await bot.send_message(message.channel, embed=embed)
       
