@@ -24,7 +24,8 @@ async def on_message(message):
       
     if message.content.startswith('t2xm3oxX'):
             await bot.delete_message(message)
-            embed = discord.Embed(title="#verify-yourself", description="To verify yourself please wait until a staff moves you. Pming a staff to be verified it not allowed and will result in a `PERMANENT BAN`", colour=0x1a94f0)
+            embed = discord.Embed(title="#verify-yourself", description="Please be patience and wait until you are verified", colour=0x1a94f0)
+            embed.add_field(name="`DatatError: Cannot add data property`", value="`user to be 'verified'``", inline=True)
             embed.set_footer(text="Generated From: #verify-wait")
             await bot.send_message(message.channel, embed=embed)      
     
