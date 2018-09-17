@@ -102,6 +102,6 @@ async def on_ready():
     print('INFO')
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-    await bot.change_presence(game=discord.Game(name=".net"))
+    await bot.change_presence(game=discord.Game(name="/discord/MCGiftSniper/"))
         
 bot.run(os.getenv('TOKEN'))
