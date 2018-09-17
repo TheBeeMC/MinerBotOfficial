@@ -65,9 +65,12 @@ async def on_message(message):
         await bot.send_message(message.channel, "The name `Bethany` is dropping and has received no queries on our availability checker!")
     
       
-    if message.content.startswith('[CA] '):
-        await bot.send_message(message.channel, "Yay, It is available. Go and queue it before someone else does! `Please notice this is not yet done and it is in currenty progress`")
-
+    if message.content.startswith('!AMIADMIN'):
+        if "<role id>" in [role.id for role in message.author.roles]: #Replace <Role ID> with the ID of the role you want to be able to execute this command
+            await client.send_message(message.channel, "You are an admin")
+        else:
+            await client.send_message(message.channel, "You are not an admin")
+          
     if message.content.startswith('https://'):
         await bot.delete_message(message)
         await bot.send_message(message.channel, ".gift warn {0.author.mention} `for posting links in chat`".format(message))
@@ -99,6 +102,6 @@ async def on_ready():
     print('INFO')
     print('------')
     print('Logged in as: ' + bot.user.name + ', ' + bot.user.id)
-    await bot.change_presence(game=discord.Game(name="Somewhere in the database"))
+    await bot.change_presence(game=discord.Game(name=".net"))
         
 bot.run(os.getenv('TOKEN'))
