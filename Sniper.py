@@ -48,9 +48,8 @@ async def on_message(message):
       
     if message.content.startswith('.setting verify '):
         await bot.delete_message(message)     
-        embed=discord.Embed(title="Discord Verification", description="Your discord account has not succesfully been linked!", color=0x1a94f0)
-        embed.set_author(name=' `To get access to verified you must first go to your settings on MCGiftSniper and check settings.`!', icon_url="")
-        embed.set_footer(text='Generated From: #verify-wait')
+        embed=discord.Embed(title="Discord Verification", description="`Your discord account has not succesfully been linked!`", color=0x1a94f0)
+        embed.set_footer(text='Generated From: 19/9/2018')
         await bot.send_message(message.channel, embed=embed)      
         
         
