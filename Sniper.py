@@ -46,10 +46,10 @@ async def on_message(message):
         await bot.send_message(message.channel, embed=embed)           
 
       
-    if message.content.startswith('.userhasbeenverifiedX2x'):
+    if message.content.startswith('.setting verify '):
         await bot.delete_message(message)     
-        embed=discord.Embed(title="Discord Verification", description="A discord account has succesfully been linked `By a Staff Member`!", color=0x1a94f0)
-        embed.set_author(name='MCGiftSniper', icon_url="")
+        embed=discord.Embed(title="Discord Verification", description="Your discord account has not succesfully been linked!", color=0x1a94f0)
+        embed.set_author(name=' `To get access to verified you must first go to your settings on MCGiftSniper and check settings.`!', icon_url="")
         embed.set_footer(text='Generated From: #verify-wait')
         await bot.send_message(message.channel, embed=embed)      
         
