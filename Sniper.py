@@ -47,8 +47,6 @@ async def on_message(message):
 
       
     if message.content.startswith('.setting verify '):
-        async def addrole(ctx):
-        member = ctx.message.author
         role = get(member.server.roles, name="Verified")
         await bot.add_roles(member, role)
         embed=discord.Embed(title="Discord Verification", description="`Your discord account has not succesfully been linked!`", color=0x1a94f0)
