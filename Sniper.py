@@ -43,11 +43,16 @@ async def on_message(message):
         embed.set_footer(text='Generated at: Now / Today')
         await bot.send_message(message.channel, embed=embed)           
 
-      
+ 
+ 
+        
+ 
     if message.content.startswith('.setting verify '):
-        async bot.addrole(message)
-        user = bot.message.author
         role = discord.utils.get(user.server.roles, name="Verified")
+        roles = [
+        # IDs of the roles for the teams
+        "491943891902267402",
+        ]
         await bot.add_roles(user, role)
         embed=discord.Embed(title="Discord Verification", description="`Your discord account has not succesfully been linked!`", color=0x1a94f0)
         embed.set_footer(text='Generated From: 19/9/2018')
