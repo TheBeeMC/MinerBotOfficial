@@ -10,13 +10,6 @@ import logging
 bot = commands.Bot(command_prefix='/')
 
 
-
-@bot.command()
-@commands.has_role("test")
-async def addrole(ctx)
-user = ctx.message.author
-role = discord.utils.get(user.server.roles, name="Verified")
-await bot.add_roles(user, role)
  
 @bot.event
 async def on_message(message):
@@ -52,8 +45,10 @@ async def on_message(message):
 
       
     if message.content.startswith('.setting verify '):
-        role = get(member.server.roles, name="Verified")
-        await bot.add_roles(member, role)
+        async def addrole(ctx)
+        user = ctx.message.author
+        role = discord.utils.get(user.server.roles, name="Verified")
+        await bot.add_roles(user, role)
         embed=discord.Embed(title="Discord Verification", description="`Your discord account has not succesfully been linked!`", color=0x1a94f0)
         embed.set_footer(text='Generated From: 19/9/2018')
         await bot.send_message(message.channel, embed=embed)      
