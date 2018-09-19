@@ -11,7 +11,12 @@ bot = commands.Bot(command_prefix='/')
 
 
 
-
+@bot.command()
+@commands.has_role("test")
+async def addrole(ctx)
+user = ctx.message.author
+role = discord.utils.get(user.server.roles, name="Verified")
+await bot.add_roles(user, role)
  
 @bot.event
 async def on_message(message):
