@@ -47,7 +47,10 @@ async def on_message(message):
 
       
     if message.content.startswith('.setting verify '):
-        await bot.delete_message(message)     
+        async def addrole(ctx):
+        member = ctx.message.author
+        role = get(member.server.roles, name="Verified")
+        await bot.add_roles(member, role)
         embed=discord.Embed(title="Discord Verification", description="`Your discord account has not succesfully been linked!`", color=0x1a94f0)
         embed.set_footer(text='Generated From: 19/9/2018')
         await bot.send_message(message.channel, embed=embed)      
@@ -63,12 +66,6 @@ async def on_message(message):
     if message.content.startswith('/names'):
         await bot.send_message(message.channel, "The name `Bethany` is dropping and has received no queries on our availability checker!")
     
-      
-    if message.content.startswith('!AMIADMIN'):
-        if "<role id>" in [role.id for role in message.author.roles]: #Replace <Role ID> with the ID of the role you want to be able to execute this command
-            await client.send_message(message.channel, "You are an admin")
-        else:
-            await client.send_message(message.channel, "You are not an admin")
           
     if message.content.startswith('https://'):
         await bot.delete_message(message)
