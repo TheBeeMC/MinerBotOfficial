@@ -26,6 +26,10 @@ async def on_message(message):
                 except discord.errors.NotFound:
                     return
                 
+                
+                
+        if message.content.startswith('!hello'):
+            await message.channel.send('Hello {0.author.mention}'.format(message))                
 
                 
 
