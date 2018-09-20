@@ -8,7 +8,7 @@ import time
 Client = discord.Client()
 client = commands.Bot(command_prefix = "?")
 
-chat_filter = ["PINEAPPLE", "APPLE", "CHROME"]
+chat_filter = ["FUCK", "BITCH", "SHIT", "FAG", "FAGGOT", "FUCKER", "ASS", "ASSHOLE", "NIGGA", "NIGER", "NIGA", "CUNT", "L", "LOSER", "BAD"]
 bypass_list = []
 
 
@@ -21,7 +21,7 @@ async def on_message(message):
             if not message.author.id in bypass_list:
                 try:
                     await client.delete_message(message)
-                    await client.send_message(message.channel, "**Bot**: Hey now swearing out here ok?")
+                    await client.send_message(message.channel, "**Bot**: Hey no swearing out here ok?")
                     await client.send_message(message.channel, "**You**: https://media1.tenor.com/images/b531fcefb582e156b994a6765ee47dc7/tenor.gif?itemid=5658414")
                 except discord.errors.NotFound:
                     return
