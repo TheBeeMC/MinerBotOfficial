@@ -7,9 +7,8 @@ import time
 Client = discord.Client()
 client = commands.Bot(command_prefix = "?")
 
-chat_filter = ["FUCK", "BITCH", "SHIT"]
+chat_filter = ["PINEAPPLE", "APPLE", "CHROME"]
 bypass_list = []
-
 
 
 
@@ -21,11 +20,7 @@ async def on_message(message):
             if not message.author.id in bypass_list:
                 try:
                     await client.delete_message(message)
-                    await client.send_message(message.channel, "{0.author.mention} chat has been removed for breaking the `Terms And Service`".format(message))
-                    embed=discord.Embed(title="Status: 🔵 On", description="Chat has been removed for `Swearing`!", color=0x1a94f0)
-                    embed.set_author(name='No Swearing Allowed', icon_url="")
-                    embed.set_footer(text='Generated From: 21/9/2018')
-                    await client.send_message(message.channel, embed=embed)     
+                    await client.send_message(message.channel, "{0.author.mention} You're not allowed to use that word here!")
                 except discord.errors.NotFound:
                     return
 
