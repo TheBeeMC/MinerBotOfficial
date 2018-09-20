@@ -4,10 +4,10 @@ from discord.ext import commands
 import asyncio
 import time
 
-Client = discord.Client()
-client = commands.Bot(command_prefix = "?")
+Bot = discord.Client()
+Bot = commands.Bot(command_prefix = "?")
 
-chat_filter = ["PINEAPPLE", "APPLE", "CHROME"]
+chat_filter = ["FUCK", "BITCH", "SHIT"]
 bypass_list = []
 
 
@@ -28,7 +28,6 @@ async def on_message(message):
                     return
 
  
-@bot
       
 @bot.event
 async def on_ready():
