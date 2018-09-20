@@ -25,6 +25,15 @@ async def on_message(message):
                     await client.send_message(message.channel, "**You**: https://media1.tenor.com/images/b531fcefb582e156b994a6765ee47dc7/tenor.gif?itemid=5658414")
                 except discord.errors.NotFound:
                     return
+                
+
+                
+@client.event
+    async def on_member_join(self, member):
+        guild = member.guild
+        if guild.system_channel is not None:
+            to_send = 'Welcome {0.mention} to {1.name}!'.format(member, guild)
+            await guild.system_channel.send(to_send)
 
  
       
