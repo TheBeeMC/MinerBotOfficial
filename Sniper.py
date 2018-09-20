@@ -8,7 +8,7 @@ import time
 Client = discord.Client()
 client = commands.Bot(command_prefix = "?")
 
-chat_filter = ["FUCK", "BITCH", "SHIT", "FAG", "FAGGOT", "FUCKER", "ASS", "ASSHOLE", "NIGGA", "NIGER", "NIGA", "CUNT", "L", "LOSER", "BAD"]
+chat_filter = ["FUCK", "BITCH", "SHIT", "FAG", "FAGGOT", "FUCKER", "ASS", "ASSHOLE", "NIGGA", "NIGER", "NIGA", "CUNT", "L", "LOSER", "BAD", "NIGGER", "FUCKK", "LMAO"]
 bypass_list = []
 
 
