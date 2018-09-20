@@ -30,7 +30,7 @@ async def on_message(message):
       
 @client.event
 async def on_ready():
-    print('No Swearing Bot')
+    print('No Swearing Bot #1')
     print('------')
     print('INFO')
     print('------')
