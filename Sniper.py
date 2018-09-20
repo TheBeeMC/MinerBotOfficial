@@ -21,8 +21,8 @@ async def on_message(message):
             if not message.author.id in bypass_list:
                 try:
                     await client.delete_message(message)
-                    await client.send_message(message.channel, "Hey now swearing out here ok?")
-                    await client.send_message(message.channel, "You: https://media1.tenor.com/images/b531fcefb582e156b994a6765ee47dc7/tenor.gif?itemid=5658414")
+                    await client.send_message(message.channel, "**Bot**: Hey now swearing out here ok?")
+                    await client.send_message(message.channel, "**You**: https://media1.tenor.com/images/b531fcefb582e156b994a6765ee47dc7/tenor.gif?itemid=5658414")
                 except discord.errors.NotFound:
                     return
 
@@ -30,11 +30,11 @@ async def on_message(message):
       
 @client.event
 async def on_ready():
-    print('Miner Bot™ @ coded by Captain#2713')
+    print('No Swearing Bot')
     print('------')
     print('INFO')
     print('------')
     print('Logged in as: ' + client.user.name + ', ' + client.user.id)
-    await client.change_presence(game=discord.Game(name="#1 No Swearing Bot"))
+    await client.change_presence(game=discord.Game(name="#1 No Swearing Bot (STATUS: ONLINE)"))
         
 client.run(os.getenv('TOKEN'))
