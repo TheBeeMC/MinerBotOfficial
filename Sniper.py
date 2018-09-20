@@ -35,6 +35,6 @@ async def on_ready():
     print('INFO')
     print('------')
     print('Logged in as: ' + client.user.name + ', ' + client.user.id)
-    await client.change_presence(game=discord.Game(name="#1 No Swearing Bot (STATUS: ONLINE)"))
+    await client.change_presence(game=discord.Game(name="#1 No Swearing Bot"))
         
 client.run(os.getenv('TOKEN'))
