@@ -21,7 +21,7 @@ async def on_message(message):
             await bot.send_message(message.channel, embed=embed)
 
     if message.content.startswith('+name'):
-        embed=discord.Embed(title="**Generated At: 29/9/2018**", description="The name `Hacks` has dropped but have recieved information that the name is going to get changed back.", colour=0x1a94f0)
+        embed=discord.Embed(title="**Generated At: 29/9/2018**", description="The name `Casino` has dropped but has already been queued on https://chearful.ninja", colour=0x1a94f0)
         embed.set_author(name='Name Drop Alert', icon_url="")
         await bot.send_message(message.channel, embed=embed)
 
