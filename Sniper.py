@@ -20,7 +20,7 @@ async def on_message(message):
             embed.set_footer(text="sniper.py™ © coded by unpredictable")
             await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('+name'):
+    if message.content.startswith('+3kxo3x'):
         await bot.delete_message(message)
         embed=discord.Embed(title="**Generated At: 29/9/2018**", description="The name `Casino` has dropped but has already been queued on https://chearful.ninja", colour=0x1a94f0)
         embed.set_author(name='Name Drop Alert', icon_url="")
