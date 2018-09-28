@@ -20,9 +20,9 @@ async def on_message(message):
             embed.set_footer(text="sniper.py™ © coded by unpredictable")
             await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('+Gjaso'):
-        embed=discord.Embed(title="**Generated At: 29/9/2018**", description="+invite: Prints an invite link for the bot.", colour=0x1a94f0)
-        embed.set_author(name='Name Drop Alert', icon_url="The name `Hacks` has dropped but have recieved information that the name is going to get changed back.")
+    if message.content.startswith('+name'):
+        embed=discord.Embed(title="**Generated At: 29/9/2018**", description="The name `Hacks` has dropped but have recieved information that the name is going to get changed back.", colour=0x1a94f0)
+        embed.set_author(name='Name Drop Alert', icon_url="")
         await bot.send_message(message.channel, embed=embed)
 
 
