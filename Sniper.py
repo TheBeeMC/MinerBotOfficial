@@ -20,19 +20,11 @@ async def on_message(message):
             embed.set_footer(text="sniper.py™ © coded by unpredictable")
             await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('+help'):
-        embed=discord.Embed(title="+snipeadd: queues a snipe", description="+invite: Prints an invite link for the bot.", color=0x1a94f0)
-        embed.set_author(name='Commands', icon_url="")
-        embed.add_field(name="+help: Brings up list of commands", value="+info: Prints info about the bot.", inline=True)
-        embed.set_footer(text='coded by unpredictable')
+    if message.content.startswith('+Gjaso'):
+        embed=discord.Embed(title="**Generated At: 29/9/2018**", description="+invite: Prints an invite link for the bot.")
+        embed.set_author(name='Name Drop Alert', icon_url="The name `Hacks` has dropped but have recieved information that the name is going to get changed back.")
         await bot.send_message(message.channel, embed=embed)
 
-    if message.content.startswith('+invite'):
-        await bot.send_message(message.channel, "**Here's the invite for the bot:** INVITE")
-        print('Bot has been added to new server')
-
-    if message.content.startswith('+info'):
-        await bot.send_message(message.channel, "Coded by unpredictable. Bot hosted on Heroku, coded with python3 and Discord.PY.")
 
 
 
