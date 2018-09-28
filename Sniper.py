@@ -47,6 +47,6 @@ async def on_ready():
     print('Running discord.py v' + discord.__version__)
     bot.loop.create_task(status_task())
 
-    await bot.change_presence(game=discord.Game(name="Checking "))
+    await bot.change_presence(game=discord.Game(name="https://namemc.com/minecraft-names?length_op=&length=3&lang=en&searches=100"))
     
 bot.run(os.getenv('TOKEN'))
