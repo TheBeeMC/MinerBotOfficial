@@ -36,7 +36,7 @@ async def on_message(message):
 @bot.event
 async def on_ready():
     print('sniper.py coded by unpredictable')
-    print('discord pyhton> msql)
+    print('discord pyhton> heroku')
     print('+--------+')
     print('| CONNECTED |')
     print('| +--------+ |')          
