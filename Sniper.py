@@ -22,7 +22,7 @@ async def on_message(message):
 
     if message.content.startswith('soon lol ok'):
         await bot.delete_message(message)
-        embed=discord.Embed(title="**11/5/2018 @ 2:28:22 AM**", description="The name `somberly` has dropped but that name is more than 36 days away from dropping. Make a ticket to queue it https://chearful.ninja.", colour=0x1a94f0)
+        embed=discord.Embed(title="**10/20/2018 @ 9:24:32 AM**", description="The name `banner` has dropped but that name is taken by someone else already!", colour=0x1a94f0)
         embed.set_author(name='Name Drop Alert 🚨', icon_url="")
         embed.set_footer(text="https://chearful.ninja/#")
         await bot.send_message(message.channel, embed=embed)
